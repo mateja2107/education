@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //create set
+      let data = [
+        {
+          token: 123123124,
+          title: "Calculus",
+          cards: [
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+          ],
+        },
+      ];
+
+      //login user
+      // fetch("user/login.php?action=login_user", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({ username: "Mateja", password: 123123 }),
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {});
+
+      //!create card_set
+      // fetch("card_sets/create_set.php?action=create_set", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(data),
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     document.write(data);
+      //   });
+
+      // get set
+      // let data = {
+      //   id: 2,
+      // };
+      // fetch("card_sets/get_set.php?action=get_set", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(data),
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     document.write(data);
+      //   });
+
+      // get all sets
+      // fetch("card_sets/get_all_sets.php?action=get_all_sets")
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     document.write(data);
+      //   });
+      // let data = {
+      //   token: 12312312,
+      // };
+      // fetch("card_sets/get_all_sets.php?action=get_all_sets", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(data),
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {});
+
+      // edit set
+      data = [
+        {
+          token: 123123124,
+          title: "Calculus",
+          id: 4,
+          cards: [
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+            {
+              question: "lorem",
+              answer: "ipsum",
+            },
+          ],
+        },
+      ];
+      fetch("card_sets/edit_set.php?action=edit_set", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => res.json())
+        .then((data) => {});
+    </script>
+  </body>
+</html>
